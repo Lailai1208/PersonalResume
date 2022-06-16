@@ -1,0 +1,296 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+// 設定標題字體 stying
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+// -----設定 header stying
+header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; //固定我們排版方式
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: white;
+  // 在css tickets 有很多範例
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+  // --- 設定logo-------
+  div.logo {
+    display: flex;
+    align-items: center;
+    flex: 5 1 400px;
+    margin-left: 2rem;
+    img {
+      width: 6vw;
+      height: 6vw;
+    }
+    h1 {
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+  //  ---設定nav---------
+  nav {
+    flex: 2 1 500px;
+    ul {
+      display: flex;
+      list-style: none;
+      justify-content: space-around;
+      margin-right: 1.5rem;
+      li {
+        a {
+          text-decoration: none;
+          color: #097771;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+// 開始設定第一頁的背景圖片
+
+main {
+  // position: relative;
+
+  section.backgroundimg {
+    min-height: 90vh; //設定最小高度的原因，是因為 此tag 沒有放入任何值，如果不設定高度只會是零
+    width: 100%;
+    background-image: url("../網站資源包/資源包1/Pictures/pexels-photo-416676.jpeg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 0; // main section.backgrooundimg 跟div.filter做比較，是比較重要的
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    h3 {
+      color: aliceblue;
+      font-size: 3.5rem;
+    }
+    button.start {
+      background-color: #3ecad3;
+      color: aliceblue;
+      padding: 0.75rem 1rem;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      border-radius: 2rem;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+// 設定背景圖片濾鏡
+
+div.filter {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+// 設定第二頁
+section.second {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 50vh;
+
+  h2 {
+    font-size: 2rem;
+    margin: 2rem 0rem;
+  }
+  section.cards {
+    display: flex;
+
+    width: 80%;
+    min-height: 80vh;
+    flex-wrap: wrap;
+    div.card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      padding: 1rem;
+      flex: 1 1 300px;
+
+      h4 {
+        font-size: 2rem;
+        margin: 1rem 0rem;
+      }
+      div.img_containner {
+        overflow: hidden;
+        width: 15vw;
+        height: 15vw;
+        border-radius: 50%;
+        img {
+          width: 15vw;
+          height: 15vw;
+          border-radius: 50%;
+          margin: 1rem 0rem;
+          transition: all 0.2s;
+        }
+        img:hover {
+          transform: scale(1.2);
+        }
+      }
+
+      p {
+        font-size: 1.25rem;
+        margin: 1rem 0rem;
+      }
+      a {
+        text-decoration: none;
+        cursor: pointer;
+        background-color: #097771;
+        padding: 1rem 1.5rem;
+        color: white;
+        margin-top: 2.5rem;
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+// 設定 footer
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 40vh;
+  justify-content: space-around;
+  background-color: rgb(203, 203, 203);
+  div.logo {
+    display: flex;
+    align-items: center;
+    img {
+      width: 6vw;
+      height: 6vw;
+    }
+  }
+
+  nav {
+    width: 30%;
+    ul {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      align-items: center;
+      list-style: none;
+      flex-wrap: wrap;
+      li {
+        flex-basis: 100px;
+        a {
+          text-decoration: none;
+          color: black;
+          cursor: pointer;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  div.links {
+    a {
+      margin: 0rem 1rem;
+      img {
+        width: 5vw;
+        height: 5vw;
+      }
+    }
+  }
+}
+
+// scrbar setting
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #09777d;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #15c2cb;
+}
+
+// 使用 @media screen 來確保使用者的設備寬度到最小的情形，我們做哪些 RWD互動
+@media screen and (max-width: 520px) {
+  header {
+    div.logo {
+      margin-left: 0rem;
+      img {
+        width: 15vw;
+        height: 15vw;
+      }
+    }
+  }
+
+  footer {
+    div.logo {
+      img {
+        width: 15vw;
+        height: 15vw;
+      }
+    }
+    div.links {
+      margin-top: 1rem;
+      a {
+        img {
+          width: 10vw;
+          height: 10vw;
+        }
+      }
+    }
+  }
+}
+
+// 設定使用者使用網頁，根據使用裝置不同，而有所變化
+@media screen and (max-width: 700px) {
+  main {
+    section.second {
+      section.cards {
+        div.card {
+          div.img_containner {
+            width: 50vw;
+            height: 50vw;
+            img {
+              width: 50vw;
+              height: 50vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}
