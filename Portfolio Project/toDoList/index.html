@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Ekko lai" />
+    <meta name="robots" content="index,follow" />
+    <meta name="rating" content="General" />
+    <!-- 設定使用者點選連結方式。下方是點選後，直接在此頁面導入一個網頁 -->
+    <base target="_target" />
+    <meta name="description" content="" />
+    <!-- cdn.js 才可以使用特殊的功能-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>todoList</title>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Ekko Lai's todoList</h1>
+    </header>
+    <form>
+      <input type="text" />
+      <input type="number" min="1" max="12" placeholder="M" required />
+      <input type="number" min="1" max="31" placeholder="D" required />
+      <button type="submit">add into list</button>
+    </form>
+    <br />
+    <br />
+    <div class="sort">
+      <button>Sort By Time</button>
+    </div>
+    <!-- 當 user 按下 "add into list" 這個button 時 列表資訊會放入這個 <section> -->
+    <section></section>
+  </body>
+  <script src="./app.js"></script>
+</html>
